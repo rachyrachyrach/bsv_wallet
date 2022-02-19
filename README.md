@@ -1,7 +1,9 @@
-# bsv_wallet
+# Wallet Address Fun with bitsv. 
+
+Used [Austecon bitsv guide](https://austecon.github.io/bitsv/guide/keys.html)
 
 
-https://austecon.github.io/bitsv/guide/keys.html
+This small python script will create you a BitcoinSV wallet. You can make wallet addresses on the TestNet and MainNet by altering the script.
 
 1. Check to see if you have the `bitsv` python library. 
 `python -m pip list`
@@ -11,9 +13,8 @@ https://austecon.github.io/bitsv/guide/keys.html
 3. Make a file called `wallet.py`
 
 
-4. Here is my example for creating a TestNet address. 
+4. Add this script in your file for creating a TestNet address. 
 ```
-(.venv) rachael@Rachaels-MacBook-Pro wallet_fun % cat wallet.py 
 #!/usr/bin/env python3
 from bitsv import Key, PrivateKey
 network = "test"
@@ -48,8 +49,9 @@ Here are my wallet addresses:
 
 `n17jkq8fFrqzy8o6C2kEKxZKkFg5HBS55y`
 
-Your wallet address will show. `mitiXLoYn6M4V81nyxzamLAyXJ1zPGJPHj`
-This can be found on WhatsOnChain: https://test.whatsonchain.com/address/mitiXLoYn6M4V81nyxzamLAyXJ1zPGJPHj
+`mitiXLoYn6M4V81nyxzamLAyXJ1zPGJPHj`
+
+Search for your address on WhatsOnChain: https://test.whatsonchain.com/address/mitiXLoYn6M4V81nyxzamLAyXJ1zPGJPHj
 
 Make a MainNet wallet address. Change `network = "test"` to `network = "main"`
 
@@ -66,3 +68,18 @@ MainNet address: 1LszG4TWQ8K38Ag1ZTomz3XCt1teZKmz9Y
 
 
 File vanity_wallet.py was written to try to get a certain word in the wallet address. This is a python script that runs in a loop.  It also displays your private key. 
+
+
+```
+#!/usr/bin/env
+from bitsv import Key, PrivateKey
+from time import sleep
+
+for _ in range(1000):
+	my_key = PrivateKey(network='test')
+	print(my_key.address)
+	print(my_key.to_hex())
+	sleep(3)
+```
+
+The line `print(my_key.to_hex())` shows your private key.  Remove this line if you don't want your private key to display. 
