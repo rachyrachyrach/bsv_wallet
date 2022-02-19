@@ -1,6 +1,6 @@
 # bsv_wallet
 
-Used this website for reference:
+
 https://austecon.github.io/bitsv/guide/keys.html
 
 1. Check to see if you have the `bitsv` python library. 
@@ -63,3 +63,6 @@ print(my_key_test.address)
 https://whatsonchain.com/address/1LszG4TWQ8K38Ag1ZTomz3XCt1teZKmz9Y
 
 MainNet address: 1LszG4TWQ8K38Ag1ZTomz3XCt1teZKmz9Y
+
+
+File vanity_wallet.py was written to try to get a certain word in the wallet address. This is a python script that runs in a loop.  It also displays your private key. 
