@@ -12,7 +12,9 @@ This small python script will create you a BitcoinSV wallet. You can make wallet
 
 
 	-If you receive an error about bitsv, you may need to create a virtual environment. I ran into this problem on a Macbook Pro. 
+	
 	`python3 -m venv .venv`
+	
 	`source .venv/bin/active`
 
 3. Make a file called `wallet.py`
