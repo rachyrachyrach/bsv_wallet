@@ -2,7 +2,7 @@
 from bitsv import Key, PrivateKey
 network = "main"
 my_key_test = PrivateKey(network=network)
-print(my_key_test.address, file=open('bsv_public_address.txt','w')),
+print(my_key_test.address, file=open('bsv_public_address.txt','a')),
 #https://austecon.github.io/bitsv/guide/keys.html#wif
 #Wif is more common for your output of your private key
 print(my_key_test.to_wif(), file=open('bsv_private_key.txt','a'))
