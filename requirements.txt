@@ -1,0 +1,12 @@
+asn1crypto==1.5.1
+bitsv==0.11.5
+certifi==2022.12.7
+cffi==1.15.1
+charset-normalizer==3.1.0
+coincurve==18.0.0
+idna==3.4
+pycparser==2.21
+python-bitcoinrpc==1.0
+requests==2.28.2
+urllib3==1.26.15
+whatsonchain==0.0.3
